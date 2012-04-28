@@ -9,7 +9,7 @@
 	<artifactId>ka-spring-base</artifactId>
 	<packaging>pom</packaging>
 	<name>Ka-Spring Base Project</name>
-	<version>0.9-SNAPSHOT</version>
+	<version>0.9</version>
 	<description>
 		Ka-Spring base project, which builds all modules.
 	</description>
@@ -24,9 +24,9 @@
   	
   	
   	<scm>
-  		<connection>scm:git:git@github.com:wigforss/Ka-Event.git</connection>
-		<url>scm:git:git@github.com:wigforss/Ka-Event.git</url>
-		<developerConnection>scm:git:git@github.com:wigforss/Ka-Event.git</developerConnection>
+  		<connection>scm:git:git@github.com:wigforss/Ka-Spring.git</connection>
+		<url>scm:git:git@github.com:wigforss/Ka-Spring.git</url>
+		<developerConnection>scm:git:git@github.com:wigforss/Ka-Spring.git</developerConnection>
   	</scm>
   	
 	<issueManagement>
