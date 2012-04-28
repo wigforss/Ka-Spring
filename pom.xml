@@ -9,7 +9,7 @@
 	<artifactId>ka-spring-base</artifactId>
 	<packaging>pom</packaging>
 	<name>Ka-Spring Base Project</name>
-	<version>0.9-SNAPSHOT</version>
+	<version>0.9</version>
 	<description>
 		Ka-Spring base project, which builds all modules.
 	</description>
