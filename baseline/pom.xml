@@ -7,13 +7,13 @@
     </parent>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.kasource.kaspring</groupId>
-	<artifactId>ka-spring-3</artifactId>
-	<name>Ka Spring 3</name>
-	<description>Spring utilities for version 3.x</description>
+	<artifactId>ka-spring-baseline</artifactId>
+	<name>Ka Spring Baseline</name>
+	<description>Spring utilities baseline at version 2.5.x</description>
 	<url>http://kasource.org</url>
 	<properties>
 		<unitils.version>3.1</unitils.version>
-	    <spring.version>[3.0.0.RELEASE,3.0.6.RELEASE]</spring.version>
+		<spring.version>[2.5,2.5.6],[2.5.6.SEC01,2.5.6.SEC02]</spring.version>
 	</properties>
 	<build>
 		<plugins>
@@ -35,47 +35,13 @@
 	<dependencies>
 		<!-- Dependencies -->
 		<dependency>
-			<artifactId>ka-spring-baseline</artifactId>
-  			<groupId>org.kasource.kaspring</groupId>
-  			<version>${project.version}</version>
-  			<exclusions>
-  				<exclusion>
-  					<groupId>org.springframework</groupId>
-  					<artifactId>spring</artifactId>
-  				</exclusion>
-  				<exclusion>
-  					<groupId>org.springframework</groupId>
-  					<artifactId>spring-jms</artifactId>
-  				</exclusion>
-  			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.kasource.commons</groupId>
-			<artifactId>ka-commons</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-core</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-expression</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-beans</artifactId>
+			<artifactId>spring</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jms</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-tx</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
@@ -134,7 +100,7 @@
 				</exclusion>
 				<exclusion>
 					<groupId>org.springframework</groupId>
-					<artifactId>spring</artifactId>
+					<artifactId>spring-core</artifactId>
 				</exclusion>
 				<exclusion>
 					<groupId>org.springframework</groupId>
@@ -153,24 +119,6 @@
 					<artifactId>spring-orm</artifactId>
 				</exclusion>
 			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-test</artifactId>
-			<version>${spring.version}</version>
-			<scope>test</scope>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework</groupId>
-					<artifactId>spring-tx</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-orm</artifactId>
-			<version>${spring.version}</version>
-			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.unitils</groupId>

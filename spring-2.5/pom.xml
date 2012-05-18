@@ -8,7 +8,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.kasource.kaspring</groupId>
 	<artifactId>ka-spring-2.5</artifactId>
-	<name>Ka Spring</name>
+	<name>Ka Spring 2.5.x</name>
 	<description>Spring utilities for version 2.5.x</description>
 	<url>http://kasource.org</url>
 	<properties>
@@ -35,108 +35,9 @@
 	<dependencies>
 		<!-- Dependencies -->
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jms</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		<dependency>
-    		<groupId>javax.jms</groupId>
-    		<artifactId>jms</artifactId>
-    		<version>1.1</version>
-		</dependency>
-		<dependency>
-    		<groupId>com.sun.xml.bind</groupId>
-    		<artifactId>jaxb-xjc</artifactId>
-    		<version>2.2.1</version>
-		</dependency>
-		<dependency>
-    		<groupId>com.caucho</groupId>
-    		<artifactId>hessian</artifactId>
-    		<version>4.0.7</version>
-		</dependency>
-		<dependency>
-    		<groupId>com.sun.xml.fastinfoset</groupId>
-    		<artifactId>FastInfoset</artifactId>
-    		<version>1.2.12</version>
-		</dependency> 
-		<dependency>
-    		<groupId>org.codehaus.jackson</groupId>
-    		<artifactId>jackson-mapper-asl</artifactId>
-    		<version>1.8.5</version>
-		</dependency>
-		<!-- Test  dependencies -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.4</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.easymock</groupId>
-			<artifactId>easymock</artifactId>
-			<version>2.5.1</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.unitils</groupId>
-			<artifactId>unitils-core</artifactId>
-			<version>${unitils.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.unitils</groupId>
-			<artifactId>unitils-test</artifactId>
-			<version>${unitils.version}</version>
-			<scope>test</scope>
-			<exclusions>
-				<exclusion>
-					<groupId>javax.transaction</groupId>
-    				<artifactId>jta</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.springframework</groupId>
-					<artifactId>spring-core</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.springframework</groupId>
-					<artifactId>spring-beans</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.springframework</groupId>
-					<artifactId>spring-test</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.springframework</groupId>
-					<artifactId>spring-tx</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.springframework</groupId>
-					<artifactId>spring-orm</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.unitils</groupId>
-			<artifactId>unitils-inject</artifactId>
-			<version>${unitils.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.unitils</groupId>
-			<artifactId>unitils-mock</artifactId>
-			<version>${unitils.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.unitils</groupId>
-			<artifactId>unitils-easymock</artifactId>
-			<version>${unitils.version}</version>
-			<scope>test</scope>
+			<artifactId>ka-spring-baseline</artifactId>
+  			<groupId>org.kasource.kaspring</groupId>
+  			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
 </project>
