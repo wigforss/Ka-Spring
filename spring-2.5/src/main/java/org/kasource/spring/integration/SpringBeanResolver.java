@@ -5,8 +5,8 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import org.kasource.commons.di.BeanNotFoundException;
-import org.kasource.commons.di.BeanResolver;
+import org.kasource.di.bean.BeanNotFoundException;
+import org.kasource.di.bean.BeanResolver;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
@@ -20,7 +20,7 @@ public class SpringBeanResolver implements BeanResolver, ApplicationContextAware
     public <T> T getBean(String beanName, Class<T> ofType) throws BeanNotFoundException {
        
         try {
-            return applicationContext.getBean(beanName, ofType);
+            return (T) applicationContext.getBean(beanName, ofType);
         } catch (BeansException e) {
             throw new BeanNotFoundException("Could not find any bean named: " + beanName + " of class: " + ofType, e);
         }
@@ -41,10 +41,12 @@ public class SpringBeanResolver implements BeanResolver, ApplicationContextAware
         Set<T> beansFound = new HashSet<T>();
         if (qualifiers.length == 0) {
             for ( Class<? extends Annotation> qualifier : qualifiers) {
-                Map<String, Object> beans = applicationContext.getBeansWithAnnotation(qualifier);
+                Map<String, T> beans =  applicationContext.getBeansOfType(ofType);
                 for (Object bean : beans.values()) {
-                    if (ofType.isAssignableFrom(bean.getClass())) {
-                        beansFound.add((T) bean);
+                    for (Class<? extends Annotation> qualifierClass : qualifiers) {
+                        if (bean.getClass().isAnnotationPresent(qualifierClass)) {
+                            beansFound.add((T) bean);
+                        }
                     }
                 }
             }
