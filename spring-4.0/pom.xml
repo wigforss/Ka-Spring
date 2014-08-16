@@ -7,13 +7,13 @@
     </parent>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.kasource.kaspring</groupId>
-	<artifactId>ka-spring-3</artifactId>
-	<name>Ka Spring 3</name>
-	<description>Spring utilities for version 3.x</description>
+	<artifactId>ka-spring-4</artifactId>
+	<name>Ka Spring 4</name>
+	<description>Spring utilities for version 4.x</description>
 	<url>http://kasource.org</url>
 	<properties>
 		<unitils.version>3.1</unitils.version>
-	    <spring.version>[3.0.0.RELEASE,3.2.10.RELEASE]</spring.version>
+	    <spring.version>[4.0.0.RELEASE,4.0.6.RELEASE]</spring.version>
 	</properties>
 	<build>
 		<plugins>

@@ -31,7 +31,7 @@
   	
 	<issueManagement>
 		<system>JIRA</system>
-		<url>http://kenai.com/jira/browse/KA_EVENT</url>
+		<url>http://java.net/jira/browse/KA_SPRING</url>
 	</issueManagement>
 	<developers>
 		<developer>
@@ -50,9 +50,9 @@
 		<ka-commons.version>1.0-SNAPSHOT</ka-commons.version>
 	</properties>
   	<modules>
-  			<module>baseline</module>
-			<module>spring-2.5</module>
-			<module>spring-3.0</module>
+		<module>spring-2.5</module>
+		<module>spring-3.0</module>
+		<module>spring-4.0</module>
 	</modules>
 	
 	<build>
@@ -115,8 +115,13 @@
 		<dependencies>
 			<dependency>
 				<groupId>org.kasource.commons</groupId>
-				<artifactId>ka-commons</artifactId>
-				<version>1.0</version>
+				<artifactId>ka-commons-reflection</artifactId>
+				<version>1.1</version>
+			</dependency>
+			<dependency>
+				<groupId>org.kasource</groupId>
+				<artifactId>ka-di-api</artifactId>
+				<version>0.1</version>
 			</dependency>
 			<dependency>
 				<groupId>junit</groupId>

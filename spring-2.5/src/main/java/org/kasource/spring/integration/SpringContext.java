@@ -49,9 +49,9 @@ public class SpringContext {
      * @throws IllegalStateException
      *             if not enabled
      **/
-    public static <T> T getBean(String beanName, Class<T> ofType) throws IllegalStateException {
+    public static Object getBean(String beanName) throws IllegalStateException {
         checkEnabled();
-        return INSTANCE.getBeanOfType(beanName, ofType);
+        return INSTANCE.getBeanByName(beanName);
     }
 
     /**
@@ -120,9 +120,9 @@ public class SpringContext {
      * 
      * @return The bean in the spring context found for the supplied name and type.
      **/
-    private <T> T getBeanOfType(String beanName, Class<T> ofType) {
+    private Object getBeanByName(String beanName) {
 
-        return applicationContext.getBean(beanName, ofType);
+        return applicationContext.getBean(beanName);
     }
 
     /**
