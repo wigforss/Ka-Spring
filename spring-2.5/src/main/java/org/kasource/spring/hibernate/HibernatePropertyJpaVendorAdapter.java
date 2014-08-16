@@ -5,7 +5,8 @@ import java.io.InputStream;
 import java.util.Map;
 import java.util.Properties;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.beans.factory.annotation.Required;
 import org.springframework.core.io.Resource;
@@ -23,7 +24,7 @@ import org.springframework.core.io.Resource;
  * @author rikardwi
  **/
 public class HibernatePropertyJpaVendorAdapter extends HibernateJpaVendorAdapter {
-	private static final Logger LOG = Logger.getLogger(HibernatePropertyJpaVendorAdapter.class);
+	private static final Logger LOG = LoggerFactory.getLogger(HibernatePropertyJpaVendorAdapter.class);
 	private Resource hibernatePropertiesLocation;
 
 	/**

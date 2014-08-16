@@ -15,6 +15,7 @@ import java.util.Map;
 import java.util.Properties;
 
 import org.easymock.classextension.EasyMock;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.core.io.Resource;
@@ -23,7 +24,7 @@ import org.unitils.easymock.EasyMockUnitils;
 import org.unitils.easymock.annotation.Mock;
 import org.unitils.inject.annotation.TestedObject;
 
-
+@Ignore
 @RunWith(UnitilsJUnit4TestClassRunner.class)
 public class HibernatePropertyJpaVendorAdapterTest {
 
